@@ -652,44 +652,76 @@ nazikçe belirt — döngüye girme.
 
 ---
 
-## 16. Mail Formatına Çevirme (ekstra)
+## 16. Mail Formatına Çevirme (varsayılan — son bölüm)
 
-Tam rapor bittikten sonra, **ekstra bir bölüm olarak**, notu kurumsal bir araştırma
-e-postası formatına çevir. Bu, raporun "gönderilebilir" halidir. Format:
+Her raporun **en sonunda, varsayılan olarak**, notu masanın gönderdiği gerçek araştırma
+e-postalarının kalıbına çevir. Bu kalıp, kullanıcının örnek `.msg` maillerinden çıkarılmıştır:
+mail kısa bir "özet/damıtım" değil, **notun e-posta gövdesine yazılmış tam hâlidir** —
+başlık + akıcı "büyük resim" açılışı + numaralı/kalın alt başlıklar + satır içi verili
+analitik paragraflar + yerinde kompakt tablo + sonuç/strateji + imza/çekince.
+
+### Gerçek maillerin anatomisi (bunu taklit et)
+1. **Başlık satırı** — kalın, net (örn. "BIST 100 Teknik ve Quant Analizi",
+   "Makroekonomik Manzara: Mayıs 2026 Özeti", "Endüstriyel Metallerde Görünüm & Strateji").
+2. **Açılış paragrafı (büyük resim)** — "…baktığımızda", "…gözlemliyoruz", "…görüyoruz" ile
+   genel tabloyu kurar; ana tezi bir-iki cümlede verir.
+3. **Numaralı veya kalın alt başlıklar** — her biri tek bir bulguyu işler ("1. Ekstrem
+   Standart Sapma İhlali…", "Üretici Cephesi (Yİ-ÜFE): Maliyet Baskıları Nerede Birikiyor?").
+   Altında satır içi, as-of'lu sayılarla **akıcı analitik paragraf** (Gözlem→Mekanizma→Sonuç).
+4. **Kompakt tablo (yerinde)** — maillerde olduğu gibi yalnızca veri-yoğun yerde (ör. TÜFE/
+   ÜFE aylık-yıllık-12A ortalama). Süs tablo koyma.
+5. **Sonuç / Strateji paragrafı** — pozisyon (veya "flat"), katalizör, risk; kısa ve net.
+6. **İmza + çekince** — kurumsal imza bloğu ve yasal çekince satırı.
 
 ```markdown
 ---
 ## 📧 Mail Formatı
 
-**Konu:** İLT: [BAŞLIK — kısa ve net, örn. "THYAO–PGSUS Kıyaslamalı Quant Görünüm"]
+**Konu:** İLT: [BAŞLIK]
 
-Merhaba,
+[BAŞLIK satırı — kalın, raporun konusu]
 
-[1 paragraf — büyük resim ve ana tez. Akıcı, kurumsal araştırma tonu: "...görüyoruz",
-"...işaret etmektedir", "diyebiliriz". Sayıları cümle içinde, as-of belirterek ver.]
+[Açılış paragrafı — büyük resim ve ana tez. Birinci çoğul, kurumsal ton: "…baktığımızda
+… görüyoruz", "…işaret etmektedir", "…diyebiliriz". Sayılar cümle içinde, as-of'lu.]
 
-[1–2 paragraf — kilit bulgular: en güçlü quant sinyal(ler), mekanizma ve sonuç. Madde
-değil, akıcı paragraf.]
+**1. [İlk bulgu başlığı]**
+[Satır içi verili akıcı paragraf — en güçlü quant sinyal, mekanizma, sonuç.]
 
-[1 paragraf — strateji ve risk: pozisyon (veya flat), katalizör, hedge — kısa.]
+**2. [İkinci bulgu başlığı]**
+[Akıcı paragraf. Veri-yoğunsa burada kompakt bir tablo olabilir.]
+
+| [Metrik] | [Aylık] | [Yıllık] | [12A Ort.] |
+|---|---|---|---|
+
+**3. [Strateji ve Risk]**
+[Pozisyon/flat, katalizör, hedge — kısa. Kenar yoksa dürüstçe "flat".]
 
 Veri kaynakları ve as-of: [kaynaklar, tarih].
 
 Saygılarımla,
-[İsim / Masa]
+[Ad Soyad]
+[Unvan]
+[Kurum] · [iletişim/çekince satırı]
 
 *Bu e-posta yatırım tavsiyesi değildir; analitik/eğitim amaçlıdır.*
 ---
 ```
 
 **Mail formatı kuralları:**
-- Tonu maillerdeki gibi tut: profesyonel, akıcı, paragraf bazlı; tablo ve madde minimumda.
-- Tam raporu tekrarlama — **özetle.** Mail, raporun 3–5 paragraflık gönderilebilir damıtımıdır.
-- Konu satırı her zaman **"İLT: "** ile başlasın (kurum içi iletim formatı).
-- Grafik/tablo mailde yer almaz; "detaylı tablolar ve grafikler ekte/raporun tam halinde"
-  diye atıfla geçilebilir.
-- Bu bölüm **isteğe bağlı eklentidir**; kullanıcı sadece analiz istediyse ve mail
-  istemediyse yine de kısa bir mail özeti sunmak iyi olur ama zorlama değildir.
+- **Ton birebir maillerdeki gibi:** kurumsal, birinci çoğul ("görüyoruz, gözlemliyoruz,
+  diyebiliriz"), quant terimli ama akıcı; her alt başlık altı paragraf (kuru madde değil).
+- **Yapı:** başlık → büyük resim açılışı → numaralı/kalın alt başlıklar → satır içi veri →
+  kompakt tablo (yalnız gerekirse) → sonuç/strateji. Bu, kısa damıtım **değil**, notun
+  gönderilebilir tam gövdesidir.
+- Konu satırı **her zaman "İLT: "** ile başlar (kurum içi iletim formatı).
+- Sayılar **as-of + kaynak** taşır; kaynaklanamayan rakam mailde de `[KAYNAK YOK]` /
+  "⚠️ temsilî" etiketlidir (Bölüm 0.4). İfade gücü Kesinlik Skalasına uyar.
+- Grafikler mail gövdesine gömülmez; "detaylı grafikler raporun tam halinde/ekte" diye atıfla
+  geçilir. Tablolar yalnız maillerdeki gibi veri-yoğun noktalarda, kompakt.
+- **İmza bloğu** kurumsal kalıpta (Ad / Unvan / Kurum / iletişim + çekince). Kullanıcı sabit
+  imzasını verdiyse onu birebir kullan; vermediyse alanları yer tutucu bırak.
+- Bu bölüm **varsayılan olarak her raporun sonunda üretilir**; kullanıcı "mail istemiyorum"
+  derse atlanır.
 
 ---
 
