@@ -1,22 +1,17 @@
 ---
 name: finansal-arastirma-v3
 description: >
-  Türkiye ve global piyasalar için QUANT-AĞIRLIKLI finansal araştırma notları üretir.
-  Varsayılan quant çerçeve: regresyon/asimetrik beta, korelasyon matrisi, z-skor/persentil,
-  realize/implied volatilite, opsiyon (skew, IV/HV, risk reversal, term structure, gamma)
-  ve koşullu beklenti/VaR. Gerçek veriyle çalışır, grafikle destekler, akıcı paragraflarla
-  yazar. Eksik veri olduğunda neyi neden yapamadığını söyler ve sadece gerekli veriyi
-  (aşırıya kaçmadan, tekrar etmeden) tek seferde ister; veri gelince raporu yeniler.
-  v3: Bölüm 5.6 Quant Araç Kutusu & Yönlendirme Matrisi (soru→teknik→veri/kaynak eşlemesi;
-  kointegrasyon, GARCH, rejim/HMM, türev fiyatlama, vade yapısı modelleri, VaR/ES) ve
-  quantamental (matematiksel quant × temel analiz) sentez; sektör/tema primer'i, fikir
-  üretimi/tarama, katalist takvimi ve tez takibi rapor tipleri; üçüncü-taraf içerik güvenlik
-  guardrail'i, [KAYNAK YOK] kaynak disiplini ve insan-onay + AI-üretimi disclaimer eklendi. Raporun en sonunda ekstra olarak kurumsal mail formatına
-  çevirir. Şu durumlarda kullan: varlık/sektör analizi (BIST, hisse, altın, petrol, dolar,
-  tahvil, emtia, döviz) · sektör/tema primer'i · fikir tarama · katalist takvimi · tez takibi
-  · haber/yasa/veri etkisi · TÜİK/TCMB/BDDK/LME/KAP/VİOP çıktısı · hedge/risk/opsiyon
-  stratejisi · "analiz et, yorumla, strateji ver, rapor yaz, grafik çiz, sektör tara,
-  fikir bul, katalist takvimi, tez güncelle" komutları.
+  Türkiye ve global piyasalar için QUANT-AĞIRLIKLI finansal araştırma notları üretir. Çekirdek
+  quant çerçeve: regresyon/asimetrik beta, korelasyon, z-skor, realize/implied volatilite,
+  opsiyon (skew, IV/HV, risk reversal, term structure) ve koşullu beklenti/VaR. v3: Quant Araç
+  Kutusu & Yönlendirme Matrisi (soru→teknik→veri/kaynak), quantamental (quant × temel) sentez,
+  kointegrasyon/GARCH/rejim-HMM/türev fiyatlama/vade yapısı modelleri; sektör-tema primer'i,
+  fikir üretimi/tarama, katalist takvimi, tez takibi; üçüncü-taraf içerik güvenlik guardrail'i ve
+  [KAYNAK YOK] kaynak disiplini; eksik veride sınırlı veri talebi; rapor sonunda kurumsal mail
+  formatı. Gerçek veriyle çalışır, grafikle destekler, akıcı paragraf yazar. Kullan:
+  BIST/hisse/altın/petrol/dolar/tahvil/emtia/döviz ve sektör analizi · haber/yasa/veri etkisi ·
+  TÜİK/TCMB/BDDK/LME/KAP/VİOP · hedge/risk/opsiyon · 'analiz et, yorumla, strateji ver, rapor
+  yaz, grafik çiz, sektör tara, fikir bul, katalist takvimi, tez güncelle'.
 ---
 
 # Finansal Araştırma Notu Üreteci (Quant-Ağırlıklı) — v3
