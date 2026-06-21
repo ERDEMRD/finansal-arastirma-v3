@@ -565,6 +565,39 @@ Matris: **Olay → Birincil → İkincil → Etkilenen Varlık → Yön → Sür
 | Canlı fiyat / hisse | Investing, TradingView, Mynet, Bloomberg | Çekerken tarih+kaynak yaz |
 | ABD makro | US BLS, Fed, CME (SOFR) | Supercore'a bak |
 
+### 13.1 Resmî Connector / MCP Veri Kaynakları  *(opsiyonel — ekstra premium katman)*
+
+Anthropic'in finansal-servisler ekosistemindeki **resmî connector ve MCP sağlayıcıları**.
+Bunlar **mevcut taramayı (Bölüm 13 + WebSearch/WebFetch) değiştirmez, üstüne ekler.** Kural:
+
+> **Bağlıysa öncelikli, bağlı değilse mevcut akış aynen sürer.** Bir connector kuruluysa
+> ilgili veri için web yerine onu kullan (Bölüm 0.4 hiyerarşisi: connector > web). Hiçbiri
+> bağlı değilse Türkiye resmî kaynakları (TÜİK, TCMB EVDS, BDDK, KAP, VİOP, LME) **yine
+> birincil** kalır; bu liste yalnızca varsa derinlik katar. Connector'dan gelen veri de
+> as-of + kaynak ile raporlanır; yoksa `[KAYNAK YOK]` etiketi geçerli (Bölüm 0.4).
+
+| Sağlayıcı | Ne sağlar | Tipik kullanım (bu skill'de) |
+|-----------|-----------|------------------------------|
+| **FactSet** | Piyasa verisi, tahmin, analitik | Fiyat/temel/forecast; comps spread besleme |
+| **S&P Capital IQ (Kensho)** | Finansal/işlem verisi, comps | Comps-analysis, değerleme, işlem çarpanları |
+| **MSCI** | Endeks, faktör, ESG | Faktör maruziyeti (5.6 faktör katmanı), risk |
+| **Morningstar / PitchBook** | Halka açık + özel piyasa, fon | Sektör primer'i, özel piyasa/VC-PE, fon akışı |
+| **LSEG (Refinitiv)** | Fiyat, tahvil/FX, makro | Faiz/eğri, FX carry, emtia; rates-monitor |
+| **Daloopa** | Filing'den çıkarılmış kalem-kalem temel | Model besleme, KPI tarihçesi |
+| **Fiscal AI** | Gerçek-zamanlı temel, hisse kapsamı | Benchmark, derin temel araştırma |
+| **Financial Modeling Prep** | Kote, temel, tablo, filing, transkript | Hızlı veri çekme (hisse/ETF/kripto/FX/emtia) |
+| **IBISWorld** | Sektör geliri, oran, risk skoru, öngörü | Sektör/tema primer'i (TAM, yapı, sürücü) |
+| **Guidepoint / Third Bridge** | Uzman görüşme transkriptleri (uyum onaylı) | Mekanizma/temel doğrulama (quantamental adım 2) |
+| **Moody's (MCP)** | Kredi notu + 600M+ şirket verisi | Kredi/risk analizi, karşı taraf, CDS bağlamı |
+| **Dun & Bradstreet** | Doğrulanmış kurumsal kimlik (D-U-N-S) | KYC/risk, varlık-kimlik çözümleme |
+| **SS&C Intralinks** | DealCenter veri odası, diligence | M&A/deal takibi, doküman Q&A |
+| **Verisk** | Sigorta (P&C, specialty) verisi | Sigorta sektörü analizi, underwriting/claims |
+
+**Kullanım notu:** Önce *hangi connector bağlı* onu kontrol et; bağlı olanı ilgili teknikte
+(Bölüm 5.6 matrisindeki "Kaynak" sütunu) web'den önce kullan. Bağlı değilse sessizce mevcut
+akışa (resmî site + web taraması) dön — kullanıcıya "şu connector olsaydı şunu açardım" gibi
+kısa bir not düşebilirsin ama zorlama, döngüye girme.
+
 ---
 
 ## 14. Referans Formüller
