@@ -1,0 +1,8 @@
+{
+  "name": "finansal-arastirma-v3",
+  "version": "3.0.0",
+  "description": "Türkiye ve global piyasalar için QUANT-AĞIRLIKLI finansal araştırma notları. v3: Anthropic Financial-Services agent desenleriyle genişletildi — Sektör/Tema Primer'i (Market Researcher), Fikir Üretimi/Tarama, Katalist Takvimi, Tez Takibi rapor tipleri; üçüncü-taraf içerik güvenlik guardrail'i, [KAYNAK YOK] kaynak disiplini ve insan-onay + AI-üretimi disclaimer. 5 katmanlı quant çerçeve (regresyon/asimetrik beta, korelasyon, z-skor, volatilite, opsiyon, koşullu beklenti) ve mail formatı korunur.",
+  "author": { "name": "ERDEMRD" },
+  "homepage": "https://github.com/ERDEMRD/finansal-arastirma-v2",
+  "keywords": ["finance","quant","research","turkiye","bist","makro","options","sector","screening","catalyst","thesis","v3"]
+}

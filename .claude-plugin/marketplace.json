@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "erdemrd-skills-v3",
+  "description": "ERDEMRD finansal araştırma skill/plugin marketplace (v3)",
+  "owner": { "name": "ERDEMRD" },
+  "plugins": [
+    {
+      "name": "finansal-arastirma-v3",
+      "description": "Quant ağırlıklı finansal araştırma + Sektör/Tema Primer'i, Fikir Üretimi, Katalist Takvimi, Tez Takibi + güvenlik/kaynak disiplini + mail formatı (v3).",
+      "author": { "name": "ERDEMRD" },
+      "category": "finance",
+      "source": ".",
+      "homepage": "https://github.com/ERDEMRD/finansal-arastirma-v2"
+    }
+  ]
+}
