@@ -26,6 +26,9 @@ quant çerçevesi (5 katman, iki test, denge mantığı), veri talebi protokolü
   sentez ilkesi. İnternetten quant research taranarak (kointegrasyon, quantamental, GARCH,
   rejim, kısa-faiz modelleri, skew/RR, VaR↔ES) ve yüklenen finansal mühendislik cheat sheet'iyle
   (Bölüm 14.1 formül ailesi) harmanlandı.
+- **Bölüm 13.1 — Resmî Connector/MCP Veri Kaynakları (opsiyonel-ekstra):** Anthropic finansal-servisler ekosistemi (FactSet, S&P Capital IQ/Kensho, MSCI, Morningstar/PitchBook,
+  LSEG, Daloopa, Fiscal AI, Financial Modeling Prep, IBISWorld, Guidepoint/Third Bridge, Moody's MCP, Dun & Bradstreet, SS&C Intralinks, Verisk). Mevcut tarama korunur; bağlıysa
+  öncelikli, değilse Türkiye resmî kaynakları (TÜİK/TCMB/KAP/VİOP/LME) birincil kalır.
 - **Bölüm 6.9 — Sektör/Tema Primer'i** *(Market Researcher iş akışı)*: genel görünüm +
   rekabet haritası + peer comps spread (aynı mali yıl, outlier z-skor flag) + 3-5 isimlik
   fikir kısa listesi + not (opsiyonel slayt).
